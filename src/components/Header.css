@@ -1,0 +1,39 @@
+.header{
+    height: 80px;
+    background-color: rgb(13,13,13);
+    color: #fff;
+}
+
+.header__container{
+    background-color: red;
+    margin: 0px 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__left{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    height: 100%;
+}
+
+.header__right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    height: 100%;
+}
+
+.header__center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 3;
+    background-color: pink;
+    height: 100%;
+}
