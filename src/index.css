@@ -4,3 +4,9 @@
   box-sizing: border-box;
   font-family: 'Merriweather', serif;
 }
+
+:root{
+  --mainBackground: rgb(13, 13, 13);
+  --customYellow: rgb(234,218,70);
+  --CustomGrey: #333;
+}

@@ -1,16 +1,17 @@
 .header{
-    height: 80px;
-    background-color: rgb(13,13,13);
+    height: 100px;
+    background-color: var(--mainBackground);
     color: #fff;
 }
 
 .header__container{
-    background-color: red;
+    /* background-color: red; */
     margin: 0px 50px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
 }
 
 .header__left{
@@ -19,6 +20,7 @@
     justify-content: flex-start;
     flex: 1;
     height: 100%;
+    margin-right: 15px;
 }
 
 .header__right{
@@ -34,6 +36,63 @@
     align-items: center;
     justify-content: center;
     flex: 3;
-    background-color: pink;
+    /* background-color: pink; */
     height: 100%;
+}
+
+.header__iconColor{
+    color: var(--customYellow);
+}
+
+.header__searchIcon{
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.header__input{
+    background-color: transparent;
+    font-size: medium;
+    border: none;
+    border-bottom: 1px solid var(--customGrey);
+    color: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.header__input:focus{
+    border-color: var(--customYellow);
+}
+
+.header__iconAndroid{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.header__iconApple{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header__iconArrow{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header__icon{
+    margin-left:15px;
+    cursor: pointer;
+}
+
+.header__getApp{
+    font-size: small;
+    cursor: pointer;
+}
+
+.header__main{
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.header__secondary{
+    padding: 0px 40px;
 }
