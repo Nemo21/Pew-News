@@ -1,22 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
 import { BiSearch } from "react-icons/bi"
 import { FaAndroid, FaApple } from "react-icons/fa"
 import { BsArrowRight } from "react-icons/bs"
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+
+    const [search, setSearch] = useState("")
+    const navigate = useNavigate()
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate(`/${search}`)
+    }
   return (
     <div className="header">
         <div className="header__container">
             <div className="header__left">
                 <BiSearch className='header__iconColor header__searchIcon'/>
-                <input type="text" className="header__input" placeholder='Search....'/>
+                <form onSubmit={handleSubmit}>
+                    <input type="text" className="header__input" placeholder='Search....' value={search} onChange={(e) => setSearch(e.target.value)}/>
+                </form>
             </div>
 
             <div className="header__center">
                 <div className="header__secondary">Blog</div>
                 <div className="header__secondary">Article</div>
-                <div className="header__main">Pew News</div>
+                <Link to="/" className="header__main link">Pew News</Link>
                 <div className="header__secondary">News</div>
                 <div className="header__secondary">Podcast</div>
             </div>

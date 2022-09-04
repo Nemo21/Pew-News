@@ -6,7 +6,6 @@ import apiDummyData from '../apiDummyData.json'
 const Hero = () => {
 
   const API_KEY = "970d448337af4526a32943339ad14ec1"
-  console.log(apiDummyData);
 
   const contentT = [
     {

@@ -10,3 +10,9 @@
   --customYellow: rgb(234,218,70);
   --customGrey: #333;
 }
+
+.link{
+  color: #fff;
+  border: none;
+  text-decoration: none;
+}

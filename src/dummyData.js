@@ -40,3 +40,13 @@ export const contactUs = [
     "Snapchat",
     "LinkedIn",
 ]
+
+export const options = [
+    "business",
+    "entertainment",
+    "general",
+    "health",
+    "science",
+    "sports",
+    "technology"
+]
