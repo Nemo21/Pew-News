@@ -1,4 +1,5 @@
 import React from 'react'
+import { articles, broadcasts, contactUs, podcasts } from '../dummyData'
 import './Footer.css'
 
 const Footer = () => {
@@ -14,59 +15,39 @@ const Footer = () => {
             <div className="footer__linksSection">
                 <ul className="footer__links">
                     <li className="footer__linkHead">Articles</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
+
+                    {
+                        articles && articles.map(article => (
+                            <li className="footer__link">{article}</li>
+                        ))
+                    }
                 </ul>
                 <ul className="footer__links">
                     <li className="footer__linkHead">Podcasts</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
+
+                    {
+                        podcasts && podcasts.map(podcast => (
+                            <li className="footer__link">{podcast}</li>
+                        ))
+                    }
                 </ul>
                 <ul className="footer__links">
                     <li className="footer__linkHead">Broadcasts</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
+                    {
+                        broadcasts && broadcasts.map(broadcast => (
+                            <li className="footer__link">{broadcast}</li>
+                        ))
+                    }
                 </ul>
                 <ul className="footer__links">
                     <li className="footer__linkHead">Contact Us</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                </ul>
-                <ul className="footer__links">
-                    <li className="footer__linkHead">About</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
-                    <li className="footer__link">Link</li>
+                    {
+                        contactUs && contactUs.map(contact => (
+                            <li className="footer__link">{contact}</li>
+
+                        ))
+                    }
+    
                 </ul>
             </div>
         </div>

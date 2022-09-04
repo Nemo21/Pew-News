@@ -1,28 +1,26 @@
 .hero{
-    height: 80vh;
+    height: 70vh;
     width: 100%;
     background-color: var(--mainBackground);
+    padding: 20px 0px;
 }
 
 .hero__container{
-    background-color: red;
     height: 100%;
     margin: 0px 50px;
     display: flex;
 }
 
 .hero__left{
-    background-color: pink;
     flex: 1;
 }
 
 .hero__right{
-    background-color: teal;
     flex: 1;
 }
 
 .hero__mainCard{
-    margin-right: 10px;
+    margin-right: 5px;
     height: 100%;
 }
 
@@ -39,7 +37,7 @@
 
 .hero__topCard{
     flex: 1;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .hero__cardContent1, .hero__cardContent2{
@@ -51,9 +49,60 @@
 }
 
 .card__pB{
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 
 .card__pT{
-    padding-top: 5px;
+    padding-top: 10px;
+}
+
+.hero__mainCardContent{
+    display: flex;
+    position: relative;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    padding-bottom: 70px;
+    background-image: url("https://images.pexels.com/photos/280076/pexels-photo-280076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero__date{
+    color: rgb(243, 243, 243);
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.hero__heading{
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.hero__icons > span{
+    color: #fff;
+    padding: 10px;
+}
+
+.hero__icon{
+    color: yellow;
+}
+
+.hero__cardContent1{
+    display: flex;
+    position: relative;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 10px;
+}
+
+.hero__cardContent1 > .hero__heading{
+    font-size: 18px;
 }

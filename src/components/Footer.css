@@ -49,6 +49,15 @@
 
 .footer__link{
     color: var(--customGrey);
-    padding-bottom: 4px;
     font-size: 14px;
+    position: relative;
+    margin-bottom: 10px;
+    border-bottom: none;
+    transition: border-bottom .1s ease-in;
+}
+
+
+.footer__link:hover{
+    border-bottom: 1px solid var(--customYellow);
+    margin-bottom: 9px;
 }
