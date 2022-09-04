@@ -1,0 +1,59 @@
+.hero{
+    height: 80vh;
+    width: 100%;
+    background-color: var(--mainBackground);
+}
+
+.hero__container{
+    background-color: red;
+    height: 100%;
+    margin: 0px 50px;
+    display: flex;
+}
+
+.hero__left{
+    background-color: pink;
+    flex: 1;
+}
+
+.hero__right{
+    background-color: teal;
+    flex: 1;
+}
+
+.hero__mainCard{
+    margin-right: 10px;
+    height: 100%;
+}
+
+.hero__rightCards{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__topCards{
+    flex: 1;
+    display: flex;
+}
+
+.hero__topCard{
+    flex: 1;
+    margin-left: 10px;
+}
+
+.hero__cardContent1, .hero__cardContent2{
+    height: 100%;
+}
+
+.hero__cardContent1{
+    margin-bottom: 10px;
+}
+
+.card__pB{
+    padding-bottom: 5px;
+}
+
+.card__pT{
+    padding-top: 5px;
+}
