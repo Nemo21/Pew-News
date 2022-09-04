@@ -18,7 +18,8 @@
     height: 100%;
     padding: 0px 20px;
     display: flex;
-    align-items: center
+    align-items: center;
+    transition: background-color .2s;
 }
 
 .nav__item:hover{
