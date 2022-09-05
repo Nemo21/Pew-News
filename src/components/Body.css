@@ -11,6 +11,8 @@
     height: 100%;
     margin: 0px 50px;
     display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .Left-Black
@@ -37,6 +39,9 @@
 {
     display:flex;
     flex-direction: row;
+    gap: 10px;
+    margin: 20px 0px;
+    border: 1px solid #fff;
 }
 
 .cardimage

@@ -11,6 +11,10 @@
   --customGrey: #333;
 }
 
+body{
+  background-color: rgb(236, 236, 236);
+}
+
 .link{
   color: #fff;
   border: none;

@@ -2,178 +2,76 @@ import React from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BiComment } from "react-icons/bi";
 import "./Body.css";
+import data from '../apiDummyData.json'
 
 function Body() {
   return (
     <div className="Body">
       <div className="Container">
         <div className="Left-Black">
-          <div className="big-card1">
-            <img
-              className="cardimage"
-              src="https://images.pexels.com/photos/1034662/pexels-photo-1034662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-            <div className="content">
-              <h3>Topic,Date</h3>
-              <br></br>
-              <h2>Heading</h2>
-              <br></br>
-              <p>Information</p>
-              <br></br>
-              <span className="heart-text">
-                <AiOutlineHeart className="heart" />
-                68
-              </span>
-              <span className="comment-text">
-                <BiComment className="comment" />
-                128
-              </span>
+
+          {
+           data && data.articles.map((item) => (
+
+            <div className="big-card1">
+              <img
+                className="cardimage"
+                src={item.urlToImage}
+                alt=""
+              />
+              <div className="content">
+                <h3>{item.publishedAt}</h3>
+                <br></br>
+                <a href={item.url} target="_black" className="link">
+                  <h2>{item.title}</h2>
+                </a>
+                <br></br>
+                <p>{item.description}</p>
+                <br></br>
+                <span className="heart-text">
+                  <AiOutlineHeart className="heart" />
+                  68
+                </span>
+                <span className="comment-text">
+                  <BiComment className="comment" />
+                  128
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="small-card1">
-            <img
-              className="cardimage"
-              src="https://images.pexels.com/photos/1034662/pexels-photo-1034662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-            <div className="content">
-              <h3>Topic,Date</h3>
-              <br></br>
-              <h2>Heading</h2>
-              <br></br>
-              <p>Information</p>
-              <br></br>
-              <span className="heart-text">
-                <AiOutlineHeart className="heart" />
-                68
-              </span>
-              <span className="comment-text">
-                <BiComment className="comment" />
-                128
-              </span>
-            </div>
-          </div>
-          <div className="small-card1">
-            <img
-              className="cardimage"
-              src="https://images.pexels.com/photos/1034662/pexels-photo-1034662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-            <div className="content">
-              <h3>Topic,Date</h3>
-              <br></br>
-              <h2>Heading</h2>
-              <br></br>
-              <p>Information</p>
-              <br></br>
-              <span className="heart-text">
-                <AiOutlineHeart className="heart" />
-                68
-              </span>
-              <span className="comment-text">
-                <BiComment className="comment" />
-                128
-              </span>
-            </div>
-          </div>
-          <div className="small-card1">
-            <img
-              className="cardimage"
-              src="https://images.pexels.com/photos/1034662/pexels-photo-1034662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-            <div className="content">
-              <h3>Topic,Date</h3>
-              <br></br>
-              <h2>Heading</h2>
-              <br></br>
-              <p>Information</p>
-              <br></br>
-              <span className="heart-text">
-                <AiOutlineHeart className="heart" />
-                68
-              </span>
-              <span className="comment-text">
-                <BiComment className="comment" />
-                128
-              </span>
-            </div>
-          </div>
+           )) 
+          }
+          
         </div>
         <div className="Center-White">
-          <div className="small-card1">
-            <div className="content">
-              <h3>Topic,Date</h3>
-              <br></br>
-              <h2>Heading</h2>
-              <br></br>
-              <p>Information</p>
-              <br></br>
-              <span className="heart-text">
-                <AiOutlineHeart className="heart" />
-                68
-              </span>
-              <span className="comment-text">
-                <BiComment className="comment" />
-                128
-              </span>
+
+        {
+           data && data.articles.map((item) => (
+
+            <div className="small-card1">
+              <div className="content">
+                <h3>{item.publishedAt}</h3>
+                <br></br>
+
+                <a href={item.url} target="_black" className="link">
+                  <h2>{item.title}</h2>
+                </a>
+                <br></br>
+                <p>{item.description}</p>
+                <br></br>
+                <span className="heart-text">
+                  <AiOutlineHeart className="heart" />
+                  68
+                </span>
+                <span className="comment-text">
+                  <BiComment className="comment" />
+                  128
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="small-card1">
-            <div className="content">
-              <h3>Topic,Date</h3>
-              <br></br>
-              <h2>Heading</h2>
-              <br></br>
-              <p>Information</p>
-              <br></br>
-              <span className="heart-text">
-                <AiOutlineHeart className="heart" />
-                68
-              </span>
-              <span className="comment-text">
-                <BiComment className="comment" />
-                128
-              </span>
-            </div>
-          </div>
-          <div className="small-card1">
-            <div className="content">
-              <h3>Topic,Date</h3>
-              <br></br>
-              <h2>Heading</h2>
-              <br></br>
-              <p>Information</p>
-              <br></br>
-              <span className="heart-text">
-                <AiOutlineHeart className="heart" />
-                68
-              </span>
-              <span className="comment-text">
-                <BiComment className="comment" />
-                128
-              </span>
-            </div>
-          </div>
-          <div className="small-card1">
-            <div className="content">
-              <h3>Topic,Date</h3>
-              <br></br>
-              <h2>Heading</h2>
-              <br></br>
-              <p>Information</p>
-              <br></br>
-              <span className="heart-text">
-                <AiOutlineHeart className="heart" />
-                68
-              </span>
-              <span className="comment-text">
-                <BiComment className="comment" />
-                128
-              </span>
-            </div>
-          </div>
+           )) 
+          }
+          
+          
         </div>
         <div className="Right-Black">
           <div className="small-card1">

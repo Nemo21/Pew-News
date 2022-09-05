@@ -19,36 +19,46 @@ import './Card.css'
 
 export default function RecipeReviewCard({data}) {
 
+
   return (
-    <Card className='card' sx={{ maxWidth: 345 }}>
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            {data?.author}
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            {/* <MoreVertIcon /> */}
-          </IconButton>
-        }
-        title={props.author}
-        subheader={props.date}
-      />
-      <CardMedia
-        component="img"
-        height="194"
-        image={props.urlToImage}
-        alt="News-img"
-      />
-      <CardContent>
-        <Typography variant='h6'>
-            {props.title}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {props.subject}
-        </Typography>
-      </CardContent>
-    </Card>
+    <div className="card__container">
+      {
+        data && data.map((item) => (
+
+        <Card className='card' sx={{ maxWidth: 345 }}>
+          <CardHeader
+            avatar={
+              <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                {item.author !== null ? item.author[0] : " "}
+              </Avatar>
+            }
+            action={
+              <IconButton aria-label="settings">
+                {/* <MoreVertIcon /> */}
+              </IconButton>
+            }
+            title={item.author !== null ? item.author : " "}
+            subheader={item.publishedAt}
+          />
+          <CardMedia
+            component="img"
+            height="194"
+            image={item.urlToImage}
+            alt="News-img"
+          />
+          <CardContent>
+            <Typography variant='h6'>
+              <a href={item.url} target="_blank">
+                {item.title}
+              </a>
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {item.description}
+            </Typography>
+          </CardContent>
+        </Card>
+        ))
+      }
+    </div>
   );
 }
