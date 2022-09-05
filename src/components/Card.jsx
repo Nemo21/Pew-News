@@ -17,14 +17,14 @@ import './Card.css'
 //subject---> actual news article
 //date------>publishedAt date
 
-export default function RecipeReviewCard(props) {
+export default function RecipeReviewCard({data}) {
 
   return (
     <Card className='card' sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            {props?.author}
+            {data?.author}
           </Avatar>
         }
         action={
@@ -38,12 +38,12 @@ export default function RecipeReviewCard(props) {
       <CardMedia
         component="img"
         height="194"
-        image={props.image}
+        image={props.urlToImage}
         alt="News-img"
       />
       <CardContent>
         <Typography variant='h6'>
-            {props.headline}
+            {props.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {props.subject}

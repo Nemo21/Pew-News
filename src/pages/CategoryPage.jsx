@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Nav from '../components/Nav'
 import { useParams } from "react-router-dom";
+import data from '../apiDummyData.json'
 
 const CategoryPage = () => {
 
@@ -12,10 +13,10 @@ const CategoryPage = () => {
     console.log(category);
   return (
     <>
-        <Header />
-        <Nav />
-        <RecipeReviewCard/>
-        <Footer />
+      <Header />
+      <Nav />
+      <RecipeReviewCard data={data.articles}/>
+      <Footer />
     </>
   )
 }
