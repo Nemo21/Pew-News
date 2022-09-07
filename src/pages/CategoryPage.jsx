@@ -5,13 +5,28 @@ import Header from '../components/Header'
 import Nav from '../components/Nav'
 import { useParams } from "react-router-dom";
 import apiDummyData from '../apiDummyData.json'
+import axios from 'axios'
 
 const CategoryPage = () => {
 
     const { category } = useParams();
-    const [data, setData] = useState(apiDummyData.articles)
+    const API_KEY = "2e7a52f057e54499b3487cee0f3641f3"
 
-    console.log(category);
+    //GET https://newsapi.org/v2/top-headlines/sources?category=businessapiKey=API_KEY
+
+    const [data, setData] = useState(apiDummyData.articles)
+    const getData = async () => {
+
+      try{
+        const response = await axios.get(`https://newsapi.org/v2/everything/sources?category=${category}&apiKey=${API_KEY}`)
+        console.log(response.data.sources);
+      }catch (error){
+        console.log(error);
+      }
+
+    }
+
+    getData();
   return (
     <>
       <Header />

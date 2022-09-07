@@ -18,10 +18,10 @@ import './Card.css'
 //subject---> actual news article
 //date------>publishedAt date
 
-export default function RecipeReviewCard() {
+export default function RecipeReviewCard({data}) {
 
-  const [data, setData] = useState(cardData.articles);
 
+  console.log(data);
   return (
     <div className="card__container">
       {
