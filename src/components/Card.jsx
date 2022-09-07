@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -7,6 +7,7 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
+import cardData from '../apiDummyData.json'
 
 import './Card.css'
 
@@ -17,8 +18,9 @@ import './Card.css'
 //subject---> actual news article
 //date------>publishedAt date
 
-export default function RecipeReviewCard({data}) {
+export default function RecipeReviewCard() {
 
+  const [data, setData] = useState(cardData.articles);
 
   return (
     <div className="card__container">
