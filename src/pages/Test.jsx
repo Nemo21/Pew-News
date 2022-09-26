@@ -16,7 +16,9 @@ const Test = () => {
 
   const getData = async () => {
     try {
-      const response = await axios.get(API_URL + 'NDTV' + `?category=${category}` );
+      const response = await axios.get(
+        API_URL + "NDTV" + `?category=${category}`
+      );
       console.log(response.data.news);
       setData(response.data.news);
     } catch (error) {
