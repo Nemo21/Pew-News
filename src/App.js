@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import TermPage from "./pages/TermPage";
 import CategoryPage from "./pages/CategoryPage";
+import Test from "./pages/Test";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/:term" element={<TermPage />}/>
         <Route path="/search/:category" element={<CategoryPage />}/>
+        <Route path="/test/:category" element={<Test />}/>
         <Route
           path="*"
           element={

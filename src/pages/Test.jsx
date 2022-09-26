@@ -6,22 +6,19 @@ import Header from "../components/Header";
 import Nav from "../components/Nav";
 import apiDummyData from "../apiDummyData.json";
 import axios from "axios";
+import TestCard from "../components/TestCard";
 
-const TermPage = () => {
-  const { term } = useParams();
+const Test = () => {
+  const { source, category } = useParams();
+  const [data, setData] = useState();
 
-  const API_KEY = "970d448337af4526a32943339ad14ec1";
+  const API_URL = `http://localhost:5000/api/`;
 
-  //GET https://newsapi.org/v2/top-headlines/sources?category=businessapiKey=API_KEY
-
-  const [data, setData] = useState(apiDummyData.articles);
   const getData = async () => {
     try {
-      const response = await axios.get(
-        `https://newsapi.org/v2/everything?q=${term}&apiKey=${API_KEY}`
-      );
-      console.log(response.data.articles);
-      setData(response.data.articles);
+      const response = await axios.get(API_URL + 'NDTV' + `?category=${category}` );
+      console.log(response.data.news);
+      setData(response.data.news);
     } catch (error) {
       console.log(error);
     }
@@ -29,17 +26,16 @@ const TermPage = () => {
 
   useEffect(() => {
     getData();
-    console.log(data);
-  }, [term]);
+  }, [source]);
 
   return (
     <>
       <Header />
       <Nav />
-      <RecipeReviewCard data={data} />
+      <TestCard data={data} />
       <Footer />
     </>
   );
 };
 
-export default TermPage;
+export default Test;
